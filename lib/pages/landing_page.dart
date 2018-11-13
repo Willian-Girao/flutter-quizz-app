@@ -1,5 +1,7 @@
 import 'package:flutter/material.dart';
 
+import './quiz_page.dart';
+
 class LandingPage extends StatelessWidget {
   /* The annotation @override marks an instance member as overriding a superclass member with the same name. It just points out that the function is also defined in an ancestor class, but is being redefined to do something else in the current class.*/
   @override
@@ -16,7 +18,7 @@ class LandingPage extends StatelessWidget {
     return new Material(
       color: Colors.greenAccent,
       child: new InkWell(
-        onTap: () => print("We tapped the page!"),
+        onTap: () => Navigator.of(context).push(new MaterialPageRoute(builder: (BuildContext context) => new QuizPage())),
         child: new Column(
           mainAxisAlignment: MainAxisAlignment.center,
           children: <Widget>[
